@@ -12,10 +12,13 @@ struct Page {
 class HelpBoxApp: public ofBaseApp{
 public:
 	// Paths should be relative to the data folder, font MUST be .ttf
-	HelpBoxApp(string _pathTxtFile, string _pathFont);
+	HelpBoxApp(string _pathTxtFile, string _pathFont, int _fontSize, int _width, int _height);
 	void setup();
 	void update();
 	void draw();
+
+	int width;
+	int height;
 
 	void keyPressed(int key);
 

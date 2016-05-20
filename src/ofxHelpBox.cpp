@@ -1,11 +1,13 @@
 ﻿#include "ofxHelpBox.h"
 
-HelpBoxApp::HelpBoxApp(string _pathTxtFile, string _pathFont) {
+HelpBoxApp::HelpBoxApp(string _pathTxtFile, string _pathFont, int _fontSize, int _width, int _height) {
 
 	ofEnableAlphaBlending();
 	ofSetVerticalSync(true);
 	ofSetFrameRate(60); // TODO - framerate should be independent of ofMain, separate thread
 	ofBackground(22, 22, 22, 255);
+	width = _width; 
+	height = _height;
 
 	pathTxtFile = _pathTxtFile;
 
@@ -33,7 +35,7 @@ HelpBoxApp::HelpBoxApp(string _pathTxtFile, string _pathFont) {
 	unicodeFont.setLineHeight(lineHeight);
 	x = 30;
 	y = 40;
-	fontSize = 35;
+	fontSize = _fontSize;
 	numLines = 0;
 	wordsWereCropped = false;
 	textFboYpos = 0;
@@ -63,6 +65,8 @@ HelpBoxApp::HelpBoxApp(string _pathTxtFile, string _pathFont) {
 	loadPage(currentPage);
 	
 }
+
+
 void HelpBoxApp::setup() {
 
 }
@@ -169,9 +173,19 @@ bool HelpBoxApp::loadSettings(string settingsPath, int expectedSize) {
 	ofxXmlSettings settings;
 	if (settings.loadFile(settingsPath)) {
 		int size = settings.getValue("settings:bufferSize",0);
-		//fontSize = settings.getValue("settings:fontSize", 28);
 		if (textBuf.size() != size) {
 			cout << "Helpbox - Textfile buffer size has changed" << endl;
+			return false;
+		}
+		int loadedFontSize = settings.getValue("settings:fontSize", 0);
+		if (loadedFontSize != fontSize) {
+			cout << "Helpbox - FontSize has changed" << endl;
+			return false;
+		}
+		int loadedW = settings.getValue("settings:width", 0);
+		int loadedH = settings.getValue("settings:height", 0);
+		if (loadedW != width || loadedH != height) {
+			cout << "Helpbox - window dimensions have changed" << endl;
 			return false;
 		}
 		settings.pushTag("pages");
@@ -199,7 +213,9 @@ bool HelpBoxApp::loadSettings(string settingsPath, int expectedSize) {
 void HelpBoxApp::saveSettings(string settingsPath, int size) {
 	ofxXmlSettings settings;
 	settings.setValue("settings:bufferSize", size);
-	//settings.setValue("settings:fontSize", fontSize);
+	settings.setValue("settings:fontSize", fontSize);
+	settings.setValue("settings:width", width);
+	settings.setValue("settings:height", height);
 	settings.addTag("pages");
 	settings.pushTag("pages");
 

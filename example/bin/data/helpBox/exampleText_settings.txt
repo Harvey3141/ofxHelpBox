@@ -1,13 +1,16 @@
 <settings>
     <bufferSize>832</bufferSize>
+    <fontSize>30</fontSize>
+    <width>1000</width>
+    <height>1400</height>
 </settings>
 <pages>
     <page>
         <lineStart>0</lineStart>
-        <lineEnd>22</lineEnd>
+        <lineEnd>26</lineEnd>
     </page>
     <page>
-        <lineStart>23</lineStart>
+        <lineStart>27</lineStart>
         <lineEnd>41</lineEnd>
     </page>
 </pages>

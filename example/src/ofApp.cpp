@@ -19,7 +19,7 @@ void ofApp::openHelpBoxWindow() {
 	settings.resizable = false;
 	shared_ptr<ofAppBaseWindow> helpBoxWindow = ofCreateWindow(settings);
 
-	shared_ptr<HelpBoxApp> helpBoxApp(new HelpBoxApp("helpBox\\exampleText.txt", "helpBox\\Arial Unicode.ttf"));
+	shared_ptr<HelpBoxApp> helpBoxApp(new HelpBoxApp("helpBox\\exampleText.txt", "helpBox\\Arial Unicode.ttf", 30, settings.width, settings.height));
 
 	ofRunApp(helpBoxWindow, helpBoxApp);
 	ofRunMainLoop();
