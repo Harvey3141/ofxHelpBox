@@ -1,0 +1,13 @@
+<settings>
+    <bufferSize>832</bufferSize>
+</settings>
+<pages>
+    <page>
+        <lineStart>0</lineStart>
+        <lineEnd>28</lineEnd>
+    </page>
+    <page>
+        <lineStart>29</lineStart>
+        <lineEnd>41</lineEnd>
+    </page>
+</pages>

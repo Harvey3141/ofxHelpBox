@@ -1,0 +1,41 @@
+
+s = show/hide settings panel
+
+7 = sets the movement modifier to 1px at a time
+8 = sets the movement modifier to 5px at a time
+9 = sets the movement modifier to 10px at a time
+0 = unselect all control points
+
+F = fullscreen (game mode)
+f = fake fullscreen (large borderless window)
+
+, = add mask
+. = remove mask
+z = change mask edged from curved to straight
+
+e = reset wrap rate and amount
+
+[ = previous video 
+] = next video
+- = play first movie
+= = play last movie
+P = toggle pause
+p = play movie (turns of syphon and turns movie mode on
+o = stop movie
+
+d = display/hide syphon/spout over video/movie
+D = reset the spout camera
+m = display/hide movie
+w = enable/disable warp
+t = display/hide test image
+T = next test image
+C = toggle control points
+R = reset warp grids
+l = tile movies
+k = stretch content
+h = toggle fisheye
+
+
+
+
+
