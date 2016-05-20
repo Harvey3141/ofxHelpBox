@@ -46,7 +46,7 @@ public:
 	float lineHeight;
 	float x;
 	float y;
-	float fontSize;
+	int fontSize;
 
 	int numLines;
 	bool wordsWereCropped;

@@ -22,12 +22,13 @@ void ofApp::openHelpBoxWindow() {
 	shared_ptr<HelpBoxApp> helpBoxApp(new HelpBoxApp("helpBox\\exampleText.txt", "helpBox\\Arial Unicode.ttf"));
 
 	ofRunApp(helpBoxWindow, helpBoxApp);
+	ofRunMainLoop();
 
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-
+	ofDrawBitmapString("Frame rate: " + ofToString(ofGetFrameRate()), ofGetWidth() - 138, ofGetHeight() - 14);
 }
 
 //--------------------------------------------------------------

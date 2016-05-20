@@ -4,10 +4,10 @@
 <pages>
     <page>
         <lineStart>0</lineStart>
-        <lineEnd>28</lineEnd>
+        <lineEnd>22</lineEnd>
     </page>
     <page>
-        <lineStart>29</lineStart>
+        <lineStart>23</lineStart>
         <lineEnd>41</lineEnd>
     </page>
 </pages>

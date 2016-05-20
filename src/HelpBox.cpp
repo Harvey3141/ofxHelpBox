@@ -33,7 +33,7 @@ HelpBoxApp::HelpBoxApp(string _pathTxtFile, string _pathFont) {
 	unicodeFont.setLineHeight(lineHeight);
 	x = 30;
 	y = 40;
-	fontSize = 28;
+	fontSize = 35;
 	numLines = 0;
 	wordsWereCropped = false;
 	textFboYpos = 0;
@@ -169,6 +169,7 @@ bool HelpBoxApp::loadSettings(string settingsPath, int expectedSize) {
 	ofxXmlSettings settings;
 	if (settings.loadFile(settingsPath)) {
 		int size = settings.getValue("settings:bufferSize",0);
+		//fontSize = settings.getValue("settings:fontSize", 28);
 		if (textBuf.size() != size) {
 			cout << "Helpbox - Textfile buffer size has changed" << endl;
 			return false;
@@ -198,6 +199,7 @@ bool HelpBoxApp::loadSettings(string settingsPath, int expectedSize) {
 void HelpBoxApp::saveSettings(string settingsPath, int size) {
 	ofxXmlSettings settings;
 	settings.setValue("settings:bufferSize", size);
+	//settings.setValue("settings:fontSize", fontSize);
 	settings.addTag("pages");
 	settings.pushTag("pages");
 
