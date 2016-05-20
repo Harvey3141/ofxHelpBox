@@ -1,6 +1,6 @@
 #include "ofMain.h"
 #include "ofApp.h"
-#include "Helpbox.h"
+#include "ofxHelpbox.h"
 #include "ofAppGLFWWindow.h"
 
 //========================================================================

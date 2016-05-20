@@ -1,4 +1,4 @@
-﻿#include "HelpBox.h"
+﻿#include "ofxHelpBox.h"
 
 HelpBoxApp::HelpBoxApp(string _pathTxtFile, string _pathFont) {
 

@@ -1,6 +1,6 @@
 # ofxHelpBox
 
-Openframworks addon for opening a text file in a new window.  
+Openframeworks addon for opening a text file in a new window.  
 
 ### Required addons
 

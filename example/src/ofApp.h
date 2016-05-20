@@ -1,7 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
-#include "HelpBox.h"
+#include "ofxHelpBox.h"
 
 class ofApp : public ofBaseApp{
 

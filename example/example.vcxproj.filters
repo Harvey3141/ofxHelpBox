@@ -28,7 +28,7 @@
     <ClCompile Include="..\..\..\addons\ofxXmlSettings\libs\tinyxmlparser.cpp">
       <Filter>addons\ofxXmlSettings\libs</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\HelpBox.cpp">
+    <ClCompile Include="..\src\ofxHelpBox.cpp">
       <Filter>addons\ofxHelpBox\src</Filter>
     </ClCompile>
   </ItemGroup>
@@ -89,7 +89,7 @@
     <ClInclude Include="..\..\..\addons\ofxXmlSettings\libs\tinyxml.h">
       <Filter>addons\ofxXmlSettings\libs</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\HelpBox.h">
+    <ClInclude Include="..\src\ofxHelpBox.h">
       <Filter>addons\ofxHelpBox\src</Filter>
     </ClInclude>
   </ItemGroup>
