@@ -33,8 +33,8 @@ HelpBoxApp::HelpBoxApp(string _pathTxtFile, string _pathFont, int _fontSize, int
 
 	lineHeight = 2;
 	unicodeFont.setLineHeight(lineHeight);
-	x = 30;
-	y = 40;
+	x = 10;
+	y = 10;
 	fontSize = _fontSize;
 	numLines = 0;
 	wordsWereCropped = false;
